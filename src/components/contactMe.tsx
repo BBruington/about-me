@@ -34,16 +34,6 @@ export default function ContactForm() {
     message: string;
   };
 
-  const sendEmail = async (e: FormEvent) => {
-    e.preventDefault();
-
-    setFormData({
-      name: "",
-      email: "",
-      phone: undefined,
-      message: "",
-    });
-  };
   return (
     <div className="relative bg-foreground my-8">
       <Toaster position="top-center" />
@@ -121,8 +111,6 @@ export default function ContactForm() {
         <div className="bg-secondary-foreground py-5 sm:py-16 px-4 sm:px-6 lg:col-span-3 lg:py-24 lg:px-8 xl:pl-12">
           <div className="mx-auto max-w-lg lg:max-w-none">
             <form
-              onSubmit={sendEmail}
-              target="_blank"
               action="https://formsubmit.co/bibruington@gmail.com"
               method="POST"
               className="grid grid-cols-1 gap-y-6"
