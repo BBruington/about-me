@@ -34,34 +34,16 @@ export default function ContactForm() {
     message: string;
   };
 
-  // const sendEmail = async (e: FormEvent) => {
-  //   e.preventDefault();
-  //   if (formData.email.length === 0 || !regexExp.test(formData.email)) {
-  //     toast.error("invalid email");
-  //     return;
-  //   }
-  //   if (formData.message.length === 0) {
-  //     toast.error("Please send a valid message");
-  //     return;
-  //   } else {
-  //     const response = await fetch("/api/send", {
-  //       method: "POST",
-  //       headers: {
-  //         "Contendt-Type": "application/json",
-  //       },
-  //       body: JSON.stringify(formData),
-  //     });
-  //     if (response.status === 200) {
-  //       setFormData({
-  //         name: "",
-  //         email: "",
-  //         phone: undefined,
-  //         message: "",
-  //       });
-  //       toast.success("Your email was sent!");
-  //     }
-  //   }
-  // };
+  const sendEmail = async (e: FormEvent) => {
+    e.preventDefault();
+
+    setFormData({
+      name: "",
+      email: "",
+      phone: undefined,
+      message: "",
+    });
+  };
   return (
     <div className="relative bg-foreground my-8">
       <Toaster position="top-center" />
@@ -109,7 +91,9 @@ export default function ContactForm() {
               </div>
             </dl>
           </div>
-          <h3 className="flex justify-center text-white mt-7">Connect With Me</h3>
+          <h3 className="flex justify-center text-white mt-7">
+            Connect With Me
+          </h3>
           <div className="flex flex-col items-left my-2">
             <div className="flex justify-center items-center py-5  text-white space-x-5 w-full bg-primary/50 rounded-lg hover:bg-primary/60">
               <a
@@ -138,7 +122,13 @@ export default function ContactForm() {
         </div>
         <div className="bg-secondary-foreground py-5 sm:py-16 px-4 sm:px-6 lg:col-span-3 lg:py-24 lg:px-8 xl:pl-12">
           <div className="mx-auto max-w-lg lg:max-w-none">
-            <form target="_blank" action="https://formsubmit.co/bibruington@gmail.com" method="POST" className="grid grid-cols-1 gap-y-6">
+            <form
+              onSubmit={sendEmail}
+              target="_blank"
+              action="https://formsubmit.co/bibruington@gmail.com"
+              method="POST"
+              className="grid grid-cols-1 gap-y-6"
+            >
               <div>
                 <label htmlFor="name" className="sr-only">
                   Full Name
@@ -146,6 +136,7 @@ export default function ContactForm() {
                 <input
                   type="text"
                   name="name"
+                  value={formData.name}
                   onChange={handleOnChange}
                   id="name"
                   className="block w-full bg-slate-500  rounded-md border-gray-300 py-3 px-4 placeholder-black shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
@@ -159,6 +150,7 @@ export default function ContactForm() {
                 <input
                   id="email"
                   name="email"
+                  value={formData.email}
                   type="email"
                   onChange={handleOnChange}
                   className="block w-full rounded-md border-gray-300 py-3 px-4 bg-slate-500 placeholder-black shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
@@ -172,6 +164,7 @@ export default function ContactForm() {
                 <input
                   type="tel"
                   name="phone"
+                  value={formData.phone}
                   onChange={handleOnChange}
                   id="phone"
                   className="block w-full rounded-md border-gray-300 py-3 px-4 bg-slate-500 placeholder-black shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
@@ -185,6 +178,7 @@ export default function ContactForm() {
                 <textarea
                   id="message"
                   name="message"
+                  value={formData.message}
                   onChange={handleOnChange}
                   rows={4}
                   className="block w-full rounded-md border-gray-300 py-3 px-4 bg-slate-500 placeholder-black shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
