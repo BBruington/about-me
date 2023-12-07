@@ -34,34 +34,34 @@ export default function ContactForm() {
     message: string;
   };
 
-  const sendEmail = async (e: FormEvent) => {
-    e.preventDefault();
-    if (formData.email.length === 0 || !regexExp.test(formData.email)) {
-      toast.error("invalid email");
-      return;
-    }
-    if (formData.message.length === 0) {
-      toast.error("Please send a valid message");
-      return;
-    } else {
-      const response = await fetch("/api/send", {
-        method: "POST",
-        headers: {
-          "Contendt-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-      if (response.status === 200) {
-        setFormData({
-          name: "",
-          email: "",
-          phone: undefined,
-          message: "",
-        });
-        toast.success("Your email was sent!");
-      }
-    }
-  };
+  // const sendEmail = async (e: FormEvent) => {
+  //   e.preventDefault();
+  //   if (formData.email.length === 0 || !regexExp.test(formData.email)) {
+  //     toast.error("invalid email");
+  //     return;
+  //   }
+  //   if (formData.message.length === 0) {
+  //     toast.error("Please send a valid message");
+  //     return;
+  //   } else {
+  //     const response = await fetch("/api/send", {
+  //       method: "POST",
+  //       headers: {
+  //         "Contendt-Type": "application/json",
+  //       },
+  //       body: JSON.stringify(formData),
+  //     });
+  //     if (response.status === 200) {
+  //       setFormData({
+  //         name: "",
+  //         email: "",
+  //         phone: undefined,
+  //         message: "",
+  //       });
+  //       toast.success("Your email was sent!");
+  //     }
+  //   }
+  // };
   return (
     <div className="relative bg-foreground my-8">
       <Toaster position="top-center" />
@@ -138,7 +138,7 @@ export default function ContactForm() {
         </div>
         <div className="bg-secondary-foreground py-5 sm:py-16 px-4 sm:px-6 lg:col-span-3 lg:py-24 lg:px-8 xl:pl-12">
           <div className="mx-auto max-w-lg lg:max-w-none">
-            <form onSubmit={sendEmail} className="grid grid-cols-1 gap-y-6">
+            <form target="_blank" action="https://formsubmit.co/bibruington@gmail.com" method="POST" className="grid grid-cols-1 gap-y-6">
               <div>
                 <label htmlFor="name" className="sr-only">
                   Full Name
