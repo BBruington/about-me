@@ -58,15 +58,13 @@ export default function ContactForm() {
               Get in touch
             </h2>
             <p className="mt-3 text-lg leading-6 text-slate-300">
-              Nullam risus blandit ac aliquam justo ipsum. Quam mauris volutpat
-              massa dictumst amet. Sapien tortor lacus arcu.
+              I am available for full-time positions. Contact me and lets talk.
             </p>
             <dl className="mt-8 text-base text-slate-300">
               <div>
                 <dt className="sr-only">Postal address</dt>
                 <dd>
-                  <p>742 Evergreen Terrace</p>
-                  <p>Springfield, OR 12345</p>
+                  <p>Raleigh North Carolina</p>
                 </dd>
               </div>
               <div className="mt-6">
@@ -86,7 +84,7 @@ export default function ContactForm() {
                     className="h-6 w-6 flex-shrink-0 text-gray-400"
                     aria-hidden="true"
                   />
-                  <span className="ml-3">support@example.com</span>
+                  <span className="ml-3">bibruington@gmail.com</span>
                 </dd>
               </div>
             </dl>
