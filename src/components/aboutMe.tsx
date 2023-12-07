@@ -1,3 +1,4 @@
+
 export default function AboutMe() {
   return (
     <div className="flex w-full bg-secondary-foreground p-6 rounded-md">
@@ -42,12 +43,12 @@ export default function AboutMe() {
           development.
         </p>
         <h3 className="text-primary mb-1">Experience</h3>
-        <p className="text-white">
+        <p className="text-white mb-2">
           I&apos;ve built the D&D Social media app <span> </span>
           <a
             target="_blank"
             href="https://quest-bazaar.vercel.app"
-            className="underline hover:cursor-pointer hover:text-slate-700"
+            className="underline hover:cursor-pointer hover:text-slate-500"
           >
             Quest Bazaar
           </a>
@@ -55,6 +56,15 @@ export default function AboutMe() {
           React and Nextjs. I coaberate and gain experience on a daily basis
           with senior developers and keep updated with the newest technologies.
         </p>
+
+        <h3 className="text-primary mb-1">What I Enjoy</h3>
+        <ul className="text-white space-y-2 list-disc ml-5">
+          <li className="mt-2">Keeping up to date with new tech stacks</li>
+          <li>Teaching / Being taught by others</li>
+          <li>Building clean ui / code</li>
+          <li>Traveling across the world</li>
+          <li>Learning languages like German</li>
+        </ul>
       </div>
     </div>
   );

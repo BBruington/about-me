@@ -1,5 +1,6 @@
 "use client";
 import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/outline";
+import { Github, Linkedin } from "lucide-react";
 import React, { ChangeEvent, FormEvent } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { useState } from "react";
@@ -57,12 +58,12 @@ export default function ContactForm() {
           phone: undefined,
           message: "",
         });
-        toast.success("Your email was sent!")
+        toast.success("Your email was sent!");
       }
     }
   };
   return (
-    <div className="relative bg-foreground mt-8">
+    <div className="relative bg-foreground my-8">
       <Toaster position="top-center" />
       <div className="absolute inset-0">
         <div className="absolute inset-y-0 left-0 w-1/2 bg-foreground" />
@@ -70,15 +71,15 @@ export default function ContactForm() {
       </div>
       <div className="relative mx-auto max-w-7xl lg:grid lg:grid-cols-5">
         <div className="bg-secondary-foreground py-16 px-4 sm:px-6 lg:col-span-2 lg:px-8 lg:py-24 xl:pr-12">
-          <div className="mx-auto max-w-lg">
+          <div className="mx-auto max-w-l">
             <h2 className="text-2xl font-bold tracking-tight text-primary sm:text-3xl">
               Get in touch
             </h2>
-            <p className="mt-3 text-lg leading-6 text-gray-500">
+            <p className="mt-3 text-lg leading-6 text-slate-300">
               Nullam risus blandit ac aliquam justo ipsum. Quam mauris volutpat
               massa dictumst amet. Sapien tortor lacus arcu.
             </p>
-            <dl className="mt-8 text-base text-gray-500">
+            <dl className="mt-8 text-base text-slate-300">
               <div>
                 <dt className="sr-only">Postal address</dt>
                 <dd>
@@ -108,8 +109,34 @@ export default function ContactForm() {
               </div>
             </dl>
           </div>
+          <h3 className="flex justify-center text-white mt-7">Connect With Me</h3>
+          <div className="flex flex-col items-left my-2">
+            <div className="flex justify-center items-center py-5  text-white space-x-5 w-full bg-primary/50 rounded-lg hover:bg-primary/60">
+              <a
+                target="_blank"
+                href="https://github.com/BBruington"
+                className="hover:text-slate-700 hover:cursor-pointer shadow-lg hover:bg-slate-500/50 bg-slate-400/50 rounded-full p-1"
+              >
+                <Github />
+              </a>
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/in/benjamin-bruington-096220238/"
+                className="hover:text-slate-700 hover:cursor-pointer shadow-lg hover:bg-slate-500/50 bg-slate-400/50 rounded-full p-1"
+              >
+                <Linkedin />
+              </a>
+              <a
+                target="_blank"
+                href="https://quest-bazaar.vercel.app"
+                className="hover:text-slate-500 hover:cursor-pointer shadow-sm"
+              >
+                Quest Bazaar
+              </a>
+            </div>
+          </div>
         </div>
-        <div className="bg-secondary-foreground py-16 px-4 sm:px-6 lg:col-span-3 lg:py-24 lg:px-8 xl:pl-12">
+        <div className="bg-secondary-foreground py-5 sm:py-16 px-4 sm:px-6 lg:col-span-3 lg:py-24 lg:px-8 xl:pl-12">
           <div className="mx-auto max-w-lg lg:max-w-none">
             <form onSubmit={sendEmail} className="grid grid-cols-1 gap-y-6">
               <div>
