@@ -39,7 +39,6 @@ export default function ContactForm() {
       <Toaster position="top-center" />
       <div className="absolute inset-0">
         <div className="absolute inset-y-0 left-0 w-1/2 bg-foreground" />
-        ReactNotifications T
       </div>
       <div className="relative mx-auto max-w-7xl lg:grid lg:grid-cols-5">
         <div className="bg-secondary-foreground py-16 px-4 sm:px-6 lg:col-span-2 lg:px-8 lg:py-24 xl:pr-12">
@@ -176,7 +175,7 @@ export default function ContactForm() {
                 <button
                   type="submit"
                   value="Send"
-                  className="inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-3 px-6 text-base font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                  className="inline-flex justify-center rounded-md border border-transparent bg-primary/80 py-3 px-6 text-base font-medium text-white shadow-sm hover:bg-primary focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                 >
                   Submit
                 </button>

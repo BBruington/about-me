@@ -1,10 +1,48 @@
 
 export default function AboutMe() {
   return (
-    <div className="flex w-full bg-secondary-foreground p-6 rounded-md">
-      <div className="flex flex-col w-1/2">
+    <div className="flex w-full bg-secondary-foreground p-10 rounded-md">
+      
+      {/* About Me */}
+      <div className="ml-8 w-1/3 border-r-2 border-primary p-3">
+        <h2 className="text-primary mb-3 text-3xl">About me</h2>
+        <h3 className="text-primary mb-1">Synopsis</h3>
+        <p className="text-white mb-5 leading-8">
+          I am a full stack developer with experiance building apps and
+          coaberating with senior developers. I&apos;m searching for an junior
+          developer role and I excel with communication and front-end
+          development.
+        </p>
+        <h3 className="text-primary mb-1">Experience</h3>
+        <p className="text-white mb-5 leading-8">
+          I&apos;ve built the D&D Social media app <span> </span>
+          <a
+            target="_blank"
+            href="https://quest-bazaar.vercel.app"
+            className="underline hover:cursor-pointer hover:text-slate-500"
+          >
+            Quest Bazaar
+          </a>
+          <span> </span>and I&apos;ve experience teaching the fundementals of
+          React and Nextjs. I coaberate and gain experience on a daily basis
+          with senior developers and keep updated with the newest technologies.
+        </p>
+
+        <h3 className="text-primary mb-1">What I Enjoy</h3>
+        <ul className="text-white space-y-2 list-disc ml-5">
+          <li className="mt-2">Keeping up to date with new tech stacks</li>
+          <li>Teaching / Being taught by others</li>
+          <li>Building clean ui / code</li>
+          <li>Traveling across the world</li>
+          <li>Learning languages like German</li>
+        </ul>
+      </div>
+      <div className="w-1/3 border-r-2 border-primary"></div>
+
+      {/* My Skills */}
+      <div className="flex flex-col w-1/3 p-8">
         <h2 className="text-primary text-3xl">My Skills</h2>
-        <div className="grid grid-cols-2 text-white mt-3 space-y-3 border-r-2 border-primary">
+        <div className="grid grid-cols-2 text-white mt-3 space-y-3">
           <span className="mt-3">Javascript</span>
           <span>Typescript</span>
           <span>Html / Css</span>
@@ -32,40 +70,8 @@ export default function AboutMe() {
           <span>Git</span>
           <span>VSCode</span>
         </div>
-      </div>
-      <div className="ml-8 w-1/2">
-        <h2 className="text-primary mb-3 text-3xl">About me</h2>
-        <h3 className="text-primary mb-1">Synopsis</h3>
-        <p className="text-white mb-2">
-          I am a full stack developer with experiance building apps and
-          coaberating with senior developers. I&apos;m searching for an junior
-          developer role and I excel with communication and front-end
-          development.
-        </p>
-        <h3 className="text-primary mb-1">Experience</h3>
-        <p className="text-white mb-2">
-          I&apos;ve built the D&D Social media app <span> </span>
-          <a
-            target="_blank"
-            href="https://quest-bazaar.vercel.app"
-            className="underline hover:cursor-pointer hover:text-slate-500"
-          >
-            Quest Bazaar
-          </a>
-          <span> </span>and I&apos;ve experience teaching the fundementals of
-          React and Nextjs. I coaberate and gain experience on a daily basis
-          with senior developers and keep updated with the newest technologies.
-        </p>
-
-        <h3 className="text-primary mb-1">What I Enjoy</h3>
-        <ul className="text-white space-y-2 list-disc ml-5">
-          <li className="mt-2">Keeping up to date with new tech stacks</li>
-          <li>Teaching / Being taught by others</li>
-          <li>Building clean ui / code</li>
-          <li>Traveling across the world</li>
-          <li>Learning languages like German</li>
-        </ul>
-      </div>
+      d</div>
+      
     </div>
   );
 }
