@@ -110,9 +110,9 @@ export default function AboutMe() {
           <span>Foursquare</span>
           <span>Airtable</span>
           <span>Magic Auth</span>
-          <span>Jsonwebtokens</span>
+          <span>Json web tokens</span>
           <span>Hasura cloud</span>
-          <span>Unsplash</span>
+          <span>Next auth</span>
         </div>
       </div>
     </div>
