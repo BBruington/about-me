@@ -85,6 +85,7 @@ export default function AboutMe() {
           <span>Typescript</span>
           <span>Html / Css</span>
           <span>Nextjs</span>
+          <span>React</span>
           <span>Tailwindcss</span>
           <span>Clerkjs</span>
           <span>Firebase</span>
@@ -112,7 +113,6 @@ export default function AboutMe() {
           <span>Magic Auth</span>
           <span>Json web tokens</span>
           <span>Hasura cloud</span>
-          <span>Next auth</span>
         </div>
       </div>
     </div>
