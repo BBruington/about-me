@@ -11,7 +11,9 @@ export default function Home() {
         <header className="w-full flex bg-secondary-foreground p-3 mt-5 mb-8 rounded-xl">
           <div className="flex flex-col sm:flex-row justify-between w-full">
             <div className="text-white w-full lg:w-1/2">
-              <h1 className="text-[70px] text-center sm:text-left text-primary">Benjamin Bruington</h1>
+              <h1 className="text-[70px] text-center sm:text-left text-primary">
+                Benjamin Bruington
+              </h1>
               <h2 className="text-3xl text-center sm:text-left italic font-thin">
                 Full-Stack Web Developer
               </h2>
@@ -31,7 +33,7 @@ export default function Home() {
                 <div className="mt-3">
                   <dt className="sr-only">Phone number</dt>
                   <dd className="flex justify-center sm:justify-end">
-                    <span className="ml-3 mr-2">+1 (555) 123-4567</span>
+                    <span className="ml-3 mr-2">(386) 225-1574</span>
                     <PhoneIcon
                       className="h-6 w-6 flex-shrink-0 text-gray-400"
                       aria-hidden="true"
@@ -42,6 +44,18 @@ export default function Home() {
                   <dt className="sr-only">Postal address</dt>
                   <dd className="flex justify-center sm:justify-end">
                     <p>Raleigh North Carolina</p>
+                  </dd>
+                </div>
+                <div className="mt-2">
+                  <dt className="sr-only">Resume</dt>
+                  <dd className="flex justify-center sm:justify-end">
+                    <a
+                      href="/Benjamin's Resume.pdf"
+                      download
+                      className="mr-2 text-primary font-bold hover:underline"
+                    >
+                      Download Resume
+                    </a>
                   </dd>
                 </div>
               </dl>

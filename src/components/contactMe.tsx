@@ -63,7 +63,7 @@ export default function ContactForm() {
                     className="h-6 w-6 flex-shrink-0 text-gray-400"
                     aria-hidden="true"
                   />
-                  <span className="ml-3">+1 (555) 123-4567</span>
+                  <span className="ml-3">(386) 225-1574</span>
                 </dd>
               </div>
               <div className="mt-3">
@@ -171,13 +171,20 @@ export default function ContactForm() {
                   defaultValue={""}
                 />
               </div>
-              <div>
+              <div className="flex items-center justify-between">
                 <button
                   type="submit"
                   value="Send"
                   className="inline-flex justify-center rounded-md border border-transparent bg-primary/80 py-3 px-6 text-base font-medium text-white shadow-sm hover:bg-primary focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                 >
                   Submit
+                </button>
+                <button className="inline-flex justify-center rounded-md border border-transparent bg-primary/80 py-3 px-6 text-base font-medium text-white shadow-sm hover:bg-primary focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                  <dt className="sr-only">Resume</dt>
+                  <dd className="flex justify-center sm:justify-end">
+                    <a href="/Benjamin's Resume.pdf" download className="mr-2 font-bold">Download Resume</a>
+                    
+                  </dd>
                 </button>
               </div>
             </form>
