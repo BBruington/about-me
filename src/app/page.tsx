@@ -3,6 +3,7 @@ import ContactForm from "@/components/contactMe";
 
 import AboutMe from "@/components/aboutMe";
 import { EnvelopeIcon } from "@heroicons/react/24/outline";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -49,13 +50,13 @@ export default function Home() {
                 <div className="mt-2">
                   <dt className="sr-only">Resume</dt>
                   <dd className="flex justify-center sm:justify-end">
-                    <a
+                    <Link
                       href="/Benjamin's Resume.pdf"
                       download
                       className="mr-2 text-primary font-bold hover:underline"
                     >
                       Download Resume
-                    </a>
+                    </Link>
                   </dd>
                 </div>
               </dl>

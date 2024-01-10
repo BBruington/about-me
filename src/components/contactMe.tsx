@@ -1,9 +1,10 @@
 "use client";
 import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/outline";
 import { Github, Linkedin } from "lucide-react";
-import React, { ChangeEvent, FormEvent } from "react";
-import toast, { Toaster } from "react-hot-toast";
+import React, { ChangeEvent } from "react";
+import { Toaster } from "react-hot-toast";
 import { useState } from "react";
+import Link from "next/link";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState<FormInputs>({
@@ -21,7 +22,6 @@ export default function ContactForm() {
       ...formData,
       [name]: value,
     });
-    console.log(formData);
   };
 
   const regexExp =
@@ -179,13 +179,13 @@ export default function ContactForm() {
                 >
                   Submit
                 </button>
-                <button className="inline-flex justify-center rounded-md border border-transparent bg-primary/80 py-3 px-6 text-base font-medium text-white shadow-sm hover:bg-primary focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
-                  <dt className="sr-only">Resume</dt>
-                  <dd className="flex justify-center sm:justify-end">
-                    <a href="/Benjamin's Resume.pdf" download className="mr-2 font-bold">Download Resume</a>
-                    
-                  </dd>
-                </button>
+                <Link
+                  href="/Benjamin's Resume.pdf"
+                  download
+                  className="inline-flex justify-center rounded-md border border-transparent bg-primary/80 py-3 px-6 text-base font-medium text-white shadow-sm hover:bg-primary focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 mr-2 font-bold"
+                >
+                  Download Resume
+                </Link>
               </div>
             </form>
           </div>
