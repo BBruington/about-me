@@ -65,15 +65,15 @@ export default function AboutMe() {
           <h3 className="text-primary mb-1">
             <a
               target="_blank"
-              href="https://discover-videos-one.vercel.app/"
+              href="https://chains-of-fate-trials.vercel.app/"
               className="underline hover:cursor-pointer hover:text-slate-500"
             >
-              Discover Videos
+              Chains of Fate Trials
             </a>
           </h3>
-          <li>Watch videos using the youtube api</li>
-          <li>favorite and save videos to watch later</li>
-          <li>uses magic auth for two factor authentication</li>
+          <li>Solve puzzles live with friends</li>
+          <li>Mix and discover combinations of ingredients to craft magical potions</li>
+          <li>Written in Typescript and React</li>
         </ul>
       </div>
 
