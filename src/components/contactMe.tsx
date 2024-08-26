@@ -50,12 +50,7 @@ export default function ContactForm() {
               I am available for full-time positions. Contact me and lets talk.
             </p>
             <dl className="mt-8 text-base text-slate-300">
-              <div>
-                <dt className="sr-only">Postal address</dt>
-                <dd>
-                  <p>Raleigh North Carolina</p>
-                </dd>
-              </div>
+              
               <div className="mt-6">
                 <dt className="sr-only">Phone number</dt>
                 <dd className="flex">
