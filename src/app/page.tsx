@@ -44,7 +44,7 @@ export default function Home() {
                 <div className="mt-3">
                   <dt className="sr-only">Postal address</dt>
                   <dd className="flex justify-center sm:justify-end">
-                    <p>72903, Fort Smith, AR</p>
+                    <p>27804, Rocky Mount, NC</p>
                   </dd>
                 </div>
                 <div className="mt-2">
