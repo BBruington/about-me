@@ -60,9 +60,10 @@ export default function Home() {
                   </dd>
                 </div>
               </dl>
-              <div className="flex mt-2 space-x-6 items-center justify-center text-white">
+              <div className="flex mt-2 space-x-6 items-center justify-end text-white">
                 <a
                   target="_blank"
+                  rel="noreferrer"
                   href="https://github.com/BBruington"
                   className="hover:text-slate-400 hover:cursor-pointer shadow-lg hover:bg-slate-500/50 bg-slate-400/50 rounded-full p-1"
                 >
@@ -70,6 +71,7 @@ export default function Home() {
                 </a>
                 <a
                   target="_blank"
+                  rel="noreferrer"
                   href="https://www.linkedin.com/in/benjamin-bruington-096220238/"
                   className="hover:text-slate-400 hover:cursor-pointer shadow-lg hover:bg-slate-500/50 bg-slate-400/50 rounded-full p-1"
                 >
