@@ -1,90 +1,85 @@
-import { Github, Linkedin, PhoneIcon } from "lucide-react";
-import ContactForm from "@/components/contactMe";
+import { Github, Linkedin } from "lucide-react";
+import { Contact } from "@/components/contact";
+import { Experience, Projects, Skills } from "@/components/resume";
+import { EMAIL, GITHUB_URL, LINKEDIN_URL, RESUME_PATH } from "@/lib/profile";
 
-import AboutMe from "@/components/aboutMe";
-import { EnvelopeIcon } from "@heroicons/react/24/outline";
-import Link from "next/link";
+const NAV = [
+  { href: "#experience", label: "Experience" },
+  { href: "#projects", label: "Projects" },
+  { href: "#skills", label: "Skills" },
+  { href: "#contact", label: "Contact" },
+];
 
 export default function Home() {
   return (
     <>
-      <main className="flex flex-col justify-between bg-foreground rounded-lg m-0 sm:m-12">
-        <header className="w-full flex bg-secondary-foreground p-3 mt-5 mb-8 rounded-xl">
-          <div className="flex flex-col sm:flex-row justify-between w-full">
-            <div className="text-white w-full lg:w-1/2">
-              <h1 className="text-[70px] text-center sm:text-left text-primary">
-                Benjamin Bruington
-              </h1>
-              <h2 className="text-3xl text-center sm:text-left italic font-thin">
-                Full-Stack Web Developer
-              </h2>
-            </div>
-            <div className="flex flex-col text-right rounded-lg pl-10 p-5">
-              <dl className=" text-base text-slate-300">
-                <div className="mt-3">
-                  <dt className="sr-only">Email</dt>
-                  <dd className="flex justify-center sm:justify-end">
-                    <span className="mr-2">bibruington@gmail.com</span>
-                    <EnvelopeIcon
-                      className="h-6 w-6 flex-shrink-0 text-gray-400"
-                      aria-hidden="true"
-                    />
-                  </dd>
-                </div>
-                <div className="mt-3">
-                  <dt className="sr-only">Phone number</dt>
-                  <dd className="flex justify-center sm:justify-end">
-                    <span className="ml-3 mr-2">(386) 225-1574</span>
-                    <PhoneIcon
-                      className="h-6 w-6 flex-shrink-0 text-gray-400"
-                      aria-hidden="true"
-                    />
-                  </dd>
-                </div>
-                <div className="mt-3">
-                  <dt className="sr-only">Postal address</dt>
-                  <dd className="flex justify-center sm:justify-end">
-                    <p>27804, Rocky Mount, NC</p>
-                  </dd>
-                </div>
-                <div className="mt-2">
-                  <dt className="sr-only">Resume</dt>
-                  <dd className="flex justify-center sm:justify-end">
-                    <Link
-                      href="/Benjamin's Resume.pdf"
-                      download
-                      className="mr-2 text-primary font-bold hover:underline"
-                    >
-                      Download Resume
-                    </Link>
-                  </dd>
-                </div>
-              </dl>
-              <div className="flex mt-2 space-x-6 items-center justify-end text-white">
-                <a
-                  target="_blank"
-                  rel="noreferrer"
-                  href="https://github.com/BBruington"
-                  className="hover:text-slate-400 hover:cursor-pointer shadow-lg hover:bg-slate-500/50 bg-slate-400/50 rounded-full p-1"
-                >
-                  <Github />
+      <a
+        href="#main"
+        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-20 focus:rounded-md focus:bg-primary focus:px-4 focus:py-2 focus:text-primary-foreground"
+      >
+        Skip to content
+      </a>
+      <header className="sticky top-0 z-10 border-b border-border/60 bg-background/80 backdrop-blur">
+        <nav className="mx-auto flex max-w-5xl items-center justify-between gap-6 px-6 py-4">
+          <a href="#main" className="link font-mono text-xs uppercase tracking-[0.18em] no-underline">
+            BB
+          </a>
+          <ul className="flex gap-5 text-sm text-muted-foreground">
+            {NAV.map((item) => (
+              <li key={item.href} className={item.href === "#skills" ? "hidden sm:block" : undefined}>
+                <a href={item.href} className="link no-underline">
+                  {item.label}
                 </a>
-                <a
-                  target="_blank"
-                  rel="noreferrer"
-                  href="https://www.linkedin.com/in/benjamin-bruington-096220238/"
-                  className="hover:text-slate-400 hover:cursor-pointer shadow-lg hover:bg-slate-500/50 bg-slate-400/50 rounded-full p-1"
-                >
-                  <Linkedin />
-                </a>
-              </div>
-            </div>
-          </div>
-        </header>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </header>
 
-        <AboutMe />
-        <ContactForm />
+      <main id="main" className="mx-auto max-w-5xl px-6">
+        <section className="pb-20 pt-20 sm:pt-28">
+          <p className="font-mono text-xs uppercase tracking-[0.18em] text-primary">Full-stack engineer</p>
+          <h1 className="mt-5 font-serif text-5xl font-medium leading-[1.02] tracking-tight sm:text-7xl">
+            Benjamin Bruington
+          </h1>
+          <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground [text-wrap:pretty] sm:text-xl">
+            I build AI features and tools that make technical systems usable by non-engineers, like an LLM
+            pipeline that turns engineering activity into client updates. I work in{" "}
+            <span className="text-foreground">React, Next.js, TypeScript and Go</span>.
+          </p>
+          <ul className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm">
+            <li>
+              <a href={`mailto:${EMAIL}`} className="link">
+                {EMAIL}
+              </a>
+            </li>
+            <li>
+              <a href={RESUME_PATH} download className="link">
+                Resume (PDF)
+              </a>
+            </li>
+            <li>
+              <a href={GITHUB_URL} target="_blank" rel="noreferrer" aria-label="GitHub" className="link inline-flex">
+                <Github className="h-5 w-5" aria-hidden="true" />
+              </a>
+            </li>
+            <li>
+              <a href={LINKEDIN_URL} target="_blank" rel="noreferrer" aria-label="LinkedIn" className="link inline-flex">
+                <Linkedin className="h-5 w-5" aria-hidden="true" />
+              </a>
+            </li>
+          </ul>
+        </section>
+
+        <Experience />
+        <Projects />
+        <Skills />
+        <Contact />
       </main>
+
+      <footer className="mx-auto max-w-5xl border-t border-border px-6 py-8 font-mono text-xs text-muted-foreground">
+        © {new Date().getFullYear()} Benjamin Bruington
+      </footer>
     </>
   );
 }
