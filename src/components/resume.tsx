@@ -38,7 +38,6 @@ const EARLIER_PROJECTS = [
   },
   {
     name: "Chains of Fate Trials",
-    href: "https://chains-of-fate-trials.vercel.app/",
     description: "Live multiplayer puzzles: combine ingredients to craft potions",
   },
   {
@@ -101,9 +100,13 @@ export function Projects() {
       <ul className="mt-4 divide-y divide-border border-y border-border">
         {EARLIER_PROJECTS.map((project) => (
           <li key={project.name} className="flex flex-col gap-1 py-4 sm:flex-row sm:items-baseline sm:gap-6">
-            <a href={project.href} target="_blank" rel="noreferrer" className="link shrink-0 font-medium sm:w-48">
-              {project.name}
-            </a>
+            {project.href ? (
+              <a href={project.href} target="_blank" rel="noreferrer" className="link shrink-0 font-medium sm:w-48">
+                {project.name}
+              </a>
+            ) : (
+              <span className="shrink-0 font-medium sm:w-48">{project.name}</span>
+            )}
             <p className="text-sm text-muted-foreground">{project.description}</p>
           </li>
         ))}
